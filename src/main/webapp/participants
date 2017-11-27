@@ -1,0 +1,38 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="webjars/bootswatch/3.3.7/cosmo/bootstrap.min.css" media="screen">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="webjars/jquery/1.11.1/jquery.min.js"></script>
+  <script src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="webjars/sammy/0.7.4/sammy.min.js"></script>
+  <script src="webjars/mustache/2.3.0/mustache.min.js"></script>
+</head>
+<body>
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="/" class="navbar-brand">Scalable Cloud Services</a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/participants">Participants</a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+  <div class="container" id="main-container"></div>
+  
+  <script src="js/models/participant.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/participants.js"></script>
+</body>
+</html>

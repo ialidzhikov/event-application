@@ -1,0 +1,78 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="webjars/bootswatch/3.3.7/cosmo/bootstrap.min.css" media="screen">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="webjars/jquery/1.11.1/jquery.min.js"></script>
+  <script src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="webjars/mustache/2.3.0/mustache.min.js"></script>
+</head>
+<body>
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="#/" class="navbar-brand">Scalable Cloud Services</a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/participants">Participants</a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+  <div class="container" id="main-container">
+    <div class="row col-lg-10 page-header">
+    <h1>Java Beer @Kanaal, 5th December</h1>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+    <form>
+      <fieldset>
+        <div class="form-group">
+          <label class="control-label" for="name-input">Name</label>
+          <input class="form-control" type="text" id="name-input" name="name">
+          <span class="glyphicon glyphicon-remove form-control-feedback invisible" id="name-error-icon"></span>
+          <span class="glyphicon glyphicon-ok form-control-feedback invisible" id="name-success-icon"></span>
+          <small class="form-text text-muted help-block invisible" id="name-help">We expect your first and last name.</small>
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="email-input">Email</label>
+          <input class="form-control" type="email" id="email-input" name="email">
+          <span class="glyphicon glyphicon-remove form-control-feedback invisible" id="email-error-icon"></span>
+          <span class="glyphicon glyphicon-ok form-control-feedback invisible" id="email-success-icon"></span>
+          <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" id="terms-and-conditions"> I agree my personal data to be stored by SAP Labs Bulgaria.
+           </label>
+        </div>
+        <button class="btn btn-primary" id="submit-button" disabled>Submit</button>
+      </fieldset>
+    </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+       <div class="alert alert-dismissible alert-success invisible" id="success-alert">
+         <button type="button" class="close" data-dismiss="alert">&times;</button>
+         <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+       </div>
+     </div>
+    </div>
+  </div>
+  
+  
+  <script src="js/validation.js"></script>
+  <script src="js/models/participant.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
