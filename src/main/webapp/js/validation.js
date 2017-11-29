@@ -8,7 +8,7 @@
     var hasValidName = $('#name-input').parent().hasClass('has-success');
     var hasValidEmail = $('#email-input').parent().hasClass('has-success');
     var hasAgreedTerms = $('#terms-and-conditions').is(":checked");
-    
+
     if (hasValidName && hasValidEmail && hasAgreedTerms) {
       $('#submit-button').prop('disabled', false);
     } else {
@@ -21,17 +21,17 @@
     if (nameRegex.test(value)) {
       $(this).parent().removeClass('has-error');
       $(this).parent().addClass('has-success');
-      
-      $('#name-help').addClass('invisible');
-      $('#name-success-icon').removeClass('invisible');
-      $('#name-error-icon').addClass('invisible');
+
+      $('#name-help').hide();
+      $('#name-success-icon').show();
+      $('#name-error-icon').hide();
     } else {
     $(this).parent().removeClass('has-success');
       $(this).parent().addClass('has-error');
       
-      $('#name-help').removeClass('invisible');
-      $('#name-success-icon').addClass('invisible');
-      $('#name-error-icon').removeClass('invisible');
+      $('#name-help').show();
+      $('#name-success-icon').hide();
+      $('#name-error-icon').show();
     }
 
     updateSubmitButton();
@@ -40,19 +40,17 @@
   $('#email-input').change(function () {
     var value = this.value.trim();
     if (emailRegex.test(value)) {
-    $(this).parent().removeClass('has-error');
+      $(this).parent().removeClass('has-error');
       $(this).parent().addClass('has-success');
-      
-      $('#email-help').addClass('invisible');
-      $('#email-success-icon').removeClass('invisible');
-      $('#email-error-icon').addClass('invisible');
+
+      $('#email-success-icon').show();
+      $('#email-error-icon').hide();
     } else {
       $(this).parent().removeClass('has-success');
       $(this).parent().addClass('has-error');
 
-      $('#email-help').removeClass('invisible');
-      $('#email-success-icon').addClass('invisible');
-      $('#email-error-icon').removeClass('invisible');
+      $('#email-success-icon').hide();
+      $('#email-error-icon').show();
     }
 
     updateSubmitButton();

@@ -14,19 +14,27 @@ app.ParticipantModel = (function () {
 
   function create(firstName, lastName, email) {
     return $.ajax({
-        method: 'POST',
-        url: 'api/participants',
-        dataType: 'json',
-        contentType: 'application/json',
-        data: JSON.stringify({
-            firstName: firstName,
-            lastName: lastName,
-            email: email
-        })
-      });
+      method: 'POST',
+      url: 'api/participants',
+      contentType: 'application/json',
+      data: JSON.stringify({
+        firstName: firstName,
+        lastName: lastName,
+        email: email
+      })
+    });
   }
+
+  function remove(id) {
+    return $.ajax({
+      method: 'DELETE',
+      url: 'api/participants/' + id
+    });
+  }
+  
   return {
     getAll: getAll,
-    create: create
-  }
+    create: create,
+    remove: remove
+  };
 }());

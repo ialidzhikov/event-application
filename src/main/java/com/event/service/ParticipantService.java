@@ -22,5 +22,12 @@ public class ParticipantService {
 	public void create(Participant participant) {
 		dao.persist(participant);
 	}
-	
+
+	public void delete(Long id) {
+		if (!dao.contains(id)) {
+			return;
+		}
+		
+		dao.remove(id);
+	}
 }

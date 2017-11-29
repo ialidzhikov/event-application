@@ -14,7 +14,10 @@
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <a href="#/" class="navbar-brand">Scalable Cloud Services</a>
+        <a href="/" class="navbar-brand">
+          <img src="img/logo.png">
+          Scalable Cloud Services
+        </a>
         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -34,41 +37,87 @@
   </div>
   <div class="row">
     <div class="col-lg-6">
-    <form>
+    <form id="registration-form">
       <fieldset>
         <div class="form-group">
           <label class="control-label" for="name-input">Name</label>
           <input class="form-control" type="text" id="name-input" name="name">
-          <span class="glyphicon glyphicon-remove form-control-feedback invisible" id="name-error-icon"></span>
-          <span class="glyphicon glyphicon-ok form-control-feedback invisible" id="name-success-icon"></span>
-          <small class="form-text text-muted help-block invisible" id="name-help">We expect your first and last name.</small>
+          <span class="glyphicon glyphicon-remove form-control-feedback hidden-custom" id="name-error-icon"></span>
+          <span class="glyphicon glyphicon-ok form-control-feedback hidden-custom" id="name-success-icon"></span>
+          <small class="form-text text-muted help-block hidden-custom" id="name-help">We expect your first and last name.</small>
         </div>
         <div class="form-group">
           <label class="control-label" for="email-input">Email</label>
           <input class="form-control" type="email" id="email-input" name="email">
-          <span class="glyphicon glyphicon-remove form-control-feedback invisible" id="email-error-icon"></span>
-          <span class="glyphicon glyphicon-ok form-control-feedback invisible" id="email-success-icon"></span>
+          <span class="glyphicon glyphicon-remove form-control-feedback hidden-custom" id="email-error-icon"></span>
+          <span class="glyphicon glyphicon-ok form-control-feedback hidden-custom" id="email-success-icon"></span>
           <small class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div>
           <label>
-            <input type="checkbox" id="terms-and-conditions"> I agree my personal data to be stored by SAP Labs Bulgaria.
-           </label>
+            <input type="checkbox" id="terms-and-conditions">
+            I agree with the <a data-toggle="modal" data-target="#terms-and-conditions-modal">Terms and Conditions</a>.
+          </label>
         </div>
-        <button class="btn btn-primary" id="submit-button" disabled>Submit</button>
+        <button class="btn btn-primary" type="button" id="submit-button" disabled>Submit</button>
       </fieldset>
     </form>
     </div>
   </div>
   <div class="row">
     <div class="col-lg-6">
-       <div class="alert alert-dismissible alert-success invisible" id="success-alert">
+       <div class="alert alert-dismissible alert-success hidden-custom" id="success-alert">
          <button type="button" class="close" data-dismiss="alert">&times;</button>
-         <strong>Well done!</strong> You successfully read <a href="#" class="alert-link">this important alert message</a>.
+         <strong>Well done!</strong> You registration was successful.
+       </div>
+       <div class="alert alert-dismissible alert-danger hidden-custom" id="error-alert">
+         <button type="button" class="close" data-dismiss="alert">&times;</button>
+         <strong>Oh snap!</strong> Change a few things up and try submitting again or contact administrator.
        </div>
      </div>
     </div>
   </div>
+  <!-- Terms and conditions modal -->
+  <div class="modal fade" id="terms-and-conditions-modal" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">Terms and Conditions</h4>
+          </div>
+          <div class="modal-body">
+            <p>
+              <span>„САП Лабс България“ ЕООД ("SAP Labs България") е регистриран администратор на лични данни, в съответствие със Закона за защита на личните данни ("ЗЗЛД"), под идентификационен № 1079.</span>
+              <span>Бихте могли да се свържете със САП ЛАБС, използвайки следните координати: гр. София, район "Овча Купел", бул. "Цар Борис" III 136A, labsbg@sap.com.</span>
+            </p>
+            <p>С попълването на настоящата форма декларирам, че:</p>
+            <ol>
+              <li>
+                <p>Предоставям доброволно своите имена и електронна поща („Данни за връзка“) на SAP Labs България.</p>
+              </li>
+              <li>
+                <p>Съм съгласен/а моите Данни за връзка да бъдат използвани от SAP Labs България, за да бъда информиран/а относно отворени работни позиции през следващите 6 месеца, считано от датата на днешното събитие - през социални мрежи или директно по електронна поща.</p>
+              </li>
+              <li>
+                <p>Съм информиран/а, че е възможно SAP Labs България да предоставя моите Данни за връзка на своето дружество-майка или друго нейно дъщерно дружество.</p>
+              </li>
+              <li>
+                <p>Съм информиран/а, че предоставянето на Данни за връзка е изцяло от доброволен характер. Предоставянето на Данни за връзка е и условие за получаване на награда от SAP Labs България, при ограничена бройка от общо и максимум 100 награди.</p>
+              </li>
+              <li>
+                <p>Съм запознат с правото си на достъп до своите Данни за връзка, както и с правото си да ги коригирам, при условията на ЗЗЛД. За тази цел следва да се свържа със SAP Labs България на адресите, посочени по-горе.</p>
+              </li>
+            </ol>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" id="btn-decline">Decline</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="btn-accept">Accept</button>
+          </div>
+        </div>
+      </div>
+    </div>
   
   
   <script src="js/validation.js"></script>

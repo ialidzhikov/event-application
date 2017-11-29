@@ -40,5 +40,11 @@ public abstract class AbstractDao<T> {
 	public boolean contains(Object primaryKey) {
 		return find(primaryKey) != null;
 	}
+	
+	@Transactional
+	public void remove(Object primaryKey) {
+		T entity = find(primaryKey);
+		getEntityManager().remove(entity);
+	}
 
 }

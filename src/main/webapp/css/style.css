@@ -1,3 +1,13 @@
+.btn-delete span {
+  line-height: 1.5;
+}
+
+.navbar-brand img {
+  display: inline-block;
+  margin: 0 5px;
+  width: 42px;
+}
+
 label {
   font-size: 18px;
   font-weight: normal;
@@ -15,6 +25,19 @@ label {
 }
 
 .invisible {
-  visibility: hidden;
   display: none;
+}
+
+.hidden-custom {
+  display: none;
+}
+
+#export-btn {
+  margin-top: 21px;
+  bottom: 0;
+  float: right;
+}
+
+.btn .caret {
+  margin-left: 3px;
 }

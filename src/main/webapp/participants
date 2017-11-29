@@ -8,14 +8,16 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="webjars/jquery/1.11.1/jquery.min.js"></script>
   <script src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="webjars/sammy/0.7.4/sammy.min.js"></script>
   <script src="webjars/mustache/2.3.0/mustache.min.js"></script>
 </head>
 <body>
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <a href="/" class="navbar-brand">Scalable Cloud Services</a>
+        <a href="/" class="navbar-brand">
+          <img src="img/logo.png">
+          Scalable Cloud Services
+        </a>
         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -29,7 +31,29 @@
         </div>
     </div>
   </div>
-  <div class="container" id="main-container"></div>
+  <div class="container" id="main-container">
+    <!-- Delete participant modal -->
+    <div class="modal fade" id="delete-modal" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Are you sure you want to delete participant with name
+              <strong class="participant-name"></strong>?
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+            <button class="btn btn-primary" id="btn-delete">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   
   <script src="js/models/participant.js"></script>
   <script src="js/renderer.js"></script>

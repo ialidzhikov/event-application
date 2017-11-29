@@ -7,6 +7,7 @@ import javax.servlet.ServletContextEvent;
 
 import com.event.module.DataSourceModule;
 import com.event.module.FilterModule;
+import com.event.resource.ParticipantExportResource;
 import com.event.resource.ParticipantResource;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
@@ -19,7 +20,7 @@ public class ApplicationContextListener extends GuiceServletContextListener {
 
 	private static Injector staticInjector;
 	private Injector injector;
-	
+
 	public static Set<Object> getSingletons() {
 		return singletons;
 	}
@@ -27,7 +28,7 @@ public class ApplicationContextListener extends GuiceServletContextListener {
 	public static Injector getStaticInjector() {
 		return staticInjector;
 	}
-	
+
 	@Override
 	protected Injector getInjector() {
 		injector = Guice.createInjector(new DataSourceModule(), new FilterModule());
@@ -46,7 +47,7 @@ public class ApplicationContextListener extends GuiceServletContextListener {
 	public void contextDestroyed(ServletContextEvent event) {
 		stopPersistService();
 	}
-	
+
 	private void startPersistService() {
 		PersistService persistService = injector.getInstance(PersistService.class);
 		try {
@@ -60,9 +61,10 @@ public class ApplicationContextListener extends GuiceServletContextListener {
 		PersistService persistService = injector.getInstance(PersistService.class);
 		persistService.stop();
 	}
-	
+
 	private void addResources() {
 		getSingletons().add(injector.getInstance(ParticipantResource.class));
+		getSingletons().add(injector.getInstance(ParticipantExportResource.class));
 	}
-	
+
 }
