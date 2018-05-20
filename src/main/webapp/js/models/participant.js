@@ -12,7 +12,8 @@ app.ParticipantModel = (function () {
     });
   }
 
-  function create(firstName, lastName, email) {
+  function create(firstName, lastName, email, university, program,
+		          yearOfEducation, preferredLanguages, interestedAbout) {
     return $.ajax({
       method: 'POST',
       url: 'api/participants',
@@ -20,7 +21,12 @@ app.ParticipantModel = (function () {
       data: JSON.stringify({
         firstName: firstName,
         lastName: lastName,
-        email: email
+        email: email,
+        university: university,
+        program: program,
+        yearOfEducation: yearOfEducation,
+        preferredLanguages: preferredLanguages,
+        interestedAbout: interestedAbout
       })
     });
   }

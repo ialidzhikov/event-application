@@ -56,7 +56,7 @@
     updateSubmitButton();
   });
 
-  $("#terms-and-conditions").change(function() {
+  $('#terms-and-conditions').change(function() {
     updateSubmitButton();
   });
 })();

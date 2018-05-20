@@ -1,11 +1,11 @@
 <div class="row col-lg-12 page-header">
   <div class="row">
     <div class="col-lg-6">
-      <h1>Participants</h1>
+      <h1>Студенти</h1>
     </div>
     <div class="col-lg-6">
       <div class="dropdown" id="export-btn">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Export as
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Изтегли като
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
@@ -18,19 +18,29 @@
     <thead>
       <tr>
         <th>#</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email</th>
-        <th class="text-center">Actions</th>
+        <th>Име</th>
+        <th>Фамилия</th>
+        <th>Мейл адрес</th>
+        <th>Университет</th>
+        <th>Специалност</th>
+        <th>Курс</th>
+        <th>Предпочитани езици</th>
+        <th>Интересува се от</th>
+        <th class="text-center">Действия</th>
       </tr>
     </thead>
     <tbody>
-      {{#participants}}
+      {{ #participants }}
       <tr>
-        <td>{{id}}</td>
-        <td>{{firstName}}</td>
-        <td>{{lastName}}</td>
-        <td>{{email}}</td>
+        <td>{{ id }}</td>
+        <td>{{ firstName }}</td>
+        <td>{{ lastName }}</td>
+        <td>{{ email }}</td>
+        <td>{{ university }}</td>
+        <td>{{ program }}</td>
+        <td>{{ yearOfEducation }}</td>
+        <td>{{ preferredLanguagesAsString }}</td>
+        <td>{{ interestedAbout }}</td>
         <td class="text-center">
           <button class="btn btn-xs btn-delete" id="lecture-delete-<%= lecture.id %>"
                   data-toggle="modal" data-target="#delete-modal"
@@ -39,7 +49,7 @@
           </button>
         </td>
       </tr>
-      {{/participants}}
+      {{ /participants }}
     </tbody>
   </table>
 </div>

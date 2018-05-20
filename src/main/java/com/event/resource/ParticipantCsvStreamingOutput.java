@@ -36,6 +36,10 @@ public class ParticipantCsvStreamingOutput implements StreamingOutput {
 		model.setFirstName(participant.getFirstName());
 		model.setLastName(participant.getLastName());
 		model.setEmail(participant.getEmail());
+		model.setUniversity(participant.getUniversity());
+		model.setProgram(participant.getProgram());
+		model.setYearOfEducation(participant.getYearOfEducation());
+		model.setInterestedAbout(participant.getInterestedAbout());
 
 		return model;
 	}

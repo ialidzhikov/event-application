@@ -1,8 +1,12 @@
 (function () {
   app.ParticipantModel.getAll()
-   .done(function (participants) {
-     app.Renderer.render('#main-container', 'templates/participants.html', {participants: participants});
-   });
+    .done(function (participants) {
+      participants.forEach(function (participant){
+        participant.preferredLanguagesAsString = participant.preferredLanguages.join(", ");
+      });
+
+      app.Renderer.render('#main-container', 'templates/participants.html', {participants: participants});
+    });
 
   $('#delete-modal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget),

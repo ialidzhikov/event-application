@@ -22,31 +22,31 @@ import com.google.inject.Singleton;
 public class ParticipantResource {
 
 	private ParticipantService service;
-	
+
 	@Inject
-	public ParticipantResource(ParticipantService service) {
+	public ParticipantResource(final ParticipantService service) {
 		this.service = service;
 	}
-	
+
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<Participant> getAll() {
 		return service.getAll();
 	}
-	
+
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response create(Participant participant) {
 		service.create(participant);
-		
+
 		return Response.ok().build();
 	}
-	
+
 	@DELETE
 	@Path("{id}")
 	public Response delete(@PathParam("id") Long id) {
 		service.delete(id);
-		
+
 		return Response.ok().build();
 	}
 }

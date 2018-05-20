@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Participants</title>
+  <title>Students</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="webjars/bootswatch/3.3.7/cosmo/bootstrap.min.css" media="screen">
   <link rel="stylesheet" href="css/style.css">
@@ -17,7 +17,7 @@
       <div class="navbar-header">
         <a href="/" class="navbar-brand">
           <img src="img/logo.png">
-          Scalable Cloud Services
+          Дни на Кариерата
         </a>
         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
           <span class="icon-bar"></span>
@@ -27,7 +27,7 @@
       </div>
       <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/participants">Participants</a></li>
+            <li><a href="/participants">Студенти</a></li>
           </ul>
         </div>
     </div>
@@ -43,13 +43,13 @@
             </button>
           </div>
           <div class="modal-body">
-            <p>Are you sure you want to delete participant with name
+            <p>Сигурни ли сте, че искате да изтриете студент с име
               <strong class="participant-name"></strong>?
             </p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-            <button class="btn btn-primary" id="btn-delete">Yes</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Не</button>
+            <button class="btn btn-primary" id="btn-delete">Да</button>
           </div>
         </div>
       </div>
