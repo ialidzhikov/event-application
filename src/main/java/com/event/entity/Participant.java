@@ -38,7 +38,7 @@ public class Participant {
 	private String program;
 	
 	@Column(name = "YEAR_OF_EDUCATION")
-	private Integer yearOfEducation;
+	private String yearOfEducation;
 	
 	@ElementCollection
 	@CollectionTable(name = "STUDENT_PREFERRED_LANGUAGES")
@@ -95,11 +95,11 @@ public class Participant {
 		this.program = program;
 	}
 
-	public Integer getYearOfEducation() {
+	public String getYearOfEducation() {
 		return yearOfEducation;
 	}
 
-	public void setYearOfEducation(Integer yearOfEducation) {
+	public void setYearOfEducation(String yearOfEducation) {
 		this.yearOfEducation = yearOfEducation;
 	}
 

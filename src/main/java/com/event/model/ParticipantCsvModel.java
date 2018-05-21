@@ -22,7 +22,7 @@ public class ParticipantCsvModel {
 	private String program;
 
 	@JsonProperty("Year of Education")
-	private Integer yearOfEducation;
+	private String yearOfEducation;
 
 	@JsonProperty("Interested About")
 	private String interestedAbout;
@@ -67,11 +67,11 @@ public class ParticipantCsvModel {
 		this.program = program;
 	}
 
-	public Integer getYearOfEducation() {
+	public String getYearOfEducation() {
 		return yearOfEducation;
 	}
 
-	public void setYearOfEducation(Integer yearOfEducation) {
+	public void setYearOfEducation(String yearOfEducation) {
 		this.yearOfEducation = yearOfEducation;
 	}
 

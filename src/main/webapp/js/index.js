@@ -6,7 +6,7 @@
     $('.glyphicon-ok').hide();
 
     $('#university-input').val('sofiaUniversity').trigger('change');
-    $('#year-of-education-input').val('1');
+    $('#year-of-education-input').val('first-year').trigger('change');
 
     $('#internship-input').prop('checked', true);
     $('#job-input').prop('checked', false);
@@ -31,7 +31,7 @@
     var email = $('#email-input').val();
     var university = $('#university-input option:selected').text();
     var program = $('#program-input option:selected').text();
-    var yearOfEducation = parseInt($('#year-of-education-input').val());
+    var yearOfEducation = $('#year-of-education-input option:selected').text();
     var preferredLanguages = $('input[name="preferredLanguages"]:checked').map(function() {
         return this.value;
     }).get();
@@ -69,6 +69,12 @@
       fillProgramOptions(options);
     } else if (university === 'technicalUniversity') {
       var options = ['Компютърни системи и технологии', 'Компютърно и софтуерно инженерство', 'Информатика и софтуерни науки', 'Друга'];
+      fillProgramOptions(options);
+    } else if (university === 'newBulgarianUniversity') {
+      var options = ['Информатика', 'Информационни технологии', 'Мрежови технологии', 'Друга'];
+      fillProgramOptions(options);
+    } else if (university === 'unibit') {
+      var options = ['Компютърни науки', 'Информационни технологии', 'Информационна сигурност', 'Друга'];
       fillProgramOptions(options);
     } else if (university === 'other') {
       var options = ['Друга'];

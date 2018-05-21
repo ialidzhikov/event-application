@@ -27,7 +27,7 @@
       </div>
       <div class="navbar-collapse collapse" id="navbar-main">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/participants">Студенти</a></li>
+            <li><a href="/participants">Кандидати</a></li>
           </ul>
         </div>
     </div>
@@ -59,6 +59,8 @@
           <select class="form-control" id="university-input">
             <option value="sofiaUniversity">Софийски университет "Св. Климент Охридски"</option>
             <option value="technicalUniversity">Технически унивеситет - София</option>
+            <option value="newBulgarianUniversity">Нов български университет</option>
+            <option value="unibit">УниБИТ</option>
             <option value="other">Друг</option>
           </select>
         </div>
@@ -76,11 +78,20 @@
           </select>
         </div>
         <div class="form-group">
-          <label class="control-label" for="year-of-education-input">Година на обучение</label>
-          <input class="form-control" type="number" id="year-of-education-input" name="yearOfEducation" value="1" min="1" max="10">
+          <label class="control-label" for="year-of-education-input">Курс</label>
+          <select class="form-control" id="year-of-education-input">
+            <option value="first-year">1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>Завършил</option>
+            <option>Друго</option>
+          </select>
         </div>
         <div class="form-group">
-          <label class="control-label" for="preferred-languages-input">Предпочитани езици</label>
+          <label class="control-label" for="preferred-languages-input">Кариерни предпочитания</label>
           <div class="row">
             <div class="col-lg-3">
               <div class="checkbox">
@@ -93,6 +104,18 @@
                 <label>
                   <input type="checkbox" id="java-checkbox" name="preferredLanguages" value="Java">
                   Java
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" id="go-checkbox" name="preferredLanguages" value="Go">
+                  Go
+                </label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" id="python-checkbox" name="preferredLanguages" value="Python">
+                  Python
                 </label>
               </div>
             </div>
@@ -109,18 +132,30 @@
                   JavaScript (Node.js)
                 </label>
               </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" id="backend-js-checkbox" name="preferredLanguages" value="DevOps engineering">
+                  DevOps engineering
+                </label>
+              </div>
             </div>
             <div class="col-lg-4">
               <div class="checkbox">
                 <label>
-                  <input type="checkbox" id="python-checkbox" name="preferredLanguages" value="Python">
-                  Python
+                  <input type="checkbox" id="qa-checkbox" name="preferredLanguages" value="QA">
+                  QA
                 </label>
               </div>
               <div class="checkbox">
                <label>
-                 <input type="checkbox" id="go-checkbox" name="preferredLanguages" value="Go">
-                 Go
+                 <input type="checkbox" id="technical-writing-checkbox" name="preferredLanguages" value="Technical writing">
+                 Technical writing
+               </label>
+              </div>
+              <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="other-checkbox" name="preferredLanguages" value="Other">
+                 Other
                </label>
               </div>
             </div>
@@ -158,7 +193,7 @@
     <div class="col-lg-6">
        <div class="alert alert-dismissible alert-success hidden-custom" id="success-alert">
          <button type="button" class="close" data-dismiss="alert">&times;</button>
-         <strong>Браво!</strong> Регистрацията ти бе успешна.
+         <strong>Браво!</strong> Кандидатурата ти бе успешно изпратена.
        </div>
        <div class="alert alert-dismissible alert-danger hidden-custom" id="error-alert">
          <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -180,24 +215,21 @@
           <div class="modal-body">
             <p>
               <span>„САП Лабс България“ ЕООД ("SAP Labs България") е регистриран администратор на лични данни, в съответствие със Закона за защита на личните данни ("ЗЗЛД"), под идентификационен № 1079.</span>
-              <span>Бихте могли да се свържете със САП ЛАБС, използвайки следните координати: гр. София, район "Овча Купел", бул. "Цар Борис" III 136A, labsbg@sap.com.</span>
+              <span>Бихте могли да се свържете със САП Лабс България, използвайки следните координати: гр. София, район "Овча Купел", бул. "Цар Борис" III 136A, labsbg@sap.com.</span>
             </p>
             <p>С попълването на настоящата форма декларирам, че:</p>
             <ol>
               <li>
-                <p>Предоставям доброволно своите имена, електронна поща и лична информация от формата за регистрация („Данни за връзка“) на SAP Labs България.</p>
+                <p>Предоставям доброволно своите имена, електронна поща и лична информация от формата за регистрация („Данни за връзка“) на САП Лабс България.</p>
               </li>
               <li>
-                <p>Съм съгласен/а моите Данни за връзка да бъдат използвани от SAP Labs България, за да бъда информиран/а относно отворени работни позиции през следващите 6 месеца, считано от датата на днешното събитие - през социални мрежи или директно по електронна поща.</p>
+                <p>Съм съгласен/а моите Данни за връзка да бъдат използвани от САП Лабс България, за да бъда информиран/а относно отворени работни позиции през следващите 6 месеца, считано от датата на днешното събитие - през социални мрежи или директно по електронна поща.</p>
               </li>
               <li>
-                <p>Съм информиран/а, че е възможно SAP Labs България да предоставя моите Данни за връзка на своето дружество-майка или друго нейно дъщерно дружество.</p>
+                <p>Съм информиран/а, че е възможно САП Лабс България да предоставя моите Данни за връзка на своето дружество-майка или друго нейно дъщерно дружество.</p>
               </li>
               <li>
-                <p>Съм информиран/а, че предоставянето на Данни за връзка е изцяло от доброволен характер. Предоставянето на Данни за връзка е и условие за получаване на награда от SAP Labs България, при ограничена бройка от общо и максимум 100 награди.</p>
-              </li>
-              <li>
-                <p>Съм запознат с правото си на достъп до своите Данни за връзка, както и с правото си да ги коригирам, при условията на ЗЗЛД. За тази цел следва да се свържа със SAP Labs България на адресите, посочени по-горе.</p>
+                <p>Съм запознат с правото си на достъп до своите Данни за връзка, както и с правото си да ги коригирам, при условията на ЗЗЛД. За тази цел следва да се свържа със САП Лабс България на адресите, посочени по-горе.</p>
               </li>
             </ol>
           </div>
